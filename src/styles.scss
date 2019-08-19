@@ -30,3 +30,11 @@ h1, h2, h3, h4, h5{
   width: calc(100% - 300px);
   max-width: 880px;
 }
+
+.inline{
+  display: inline-block;
+}
+
+.none-events{
+  pointer-events: none;
+}

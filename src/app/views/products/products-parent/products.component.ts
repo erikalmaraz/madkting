@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-orders',
-  templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.scss']
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.scss']
 })
-export class OrdersComponent implements OnInit {
+export class ProductsComponent implements OnInit {
 
   isInDetail: boolean = false;
 
@@ -18,7 +18,6 @@ export class OrdersComponent implements OnInit {
     const _ = this;
     if(_.router.url.includes('products')){
       _.isInDetail = true;
-      console.log(_.isInDetail);
     }
   }
 }

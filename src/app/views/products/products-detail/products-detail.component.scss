@@ -1,23 +1,23 @@
 @import "../../../style-variables/global-variables.scss";
-.order-detail-view{
+.products-detail-view{
   margin-top: 10px;
 }
-.order-detail-horizontal-wrapper{
+.products-detail-horizontal-wrapper{
   display: flex;
   justify-content: space-between;
-  .order-detail-section-item{
+  .products-detail-section-item{
     width: 49%;
-    background-color: #fff;
+    background-color: $white;
     margin: 8px;
     border-top: 2px solid #49a4ca;
     padding: 20px;
     font-size: 13px;
     color: #767987;
-    .order-detail-section-item-title{
+    .products-detail-section-item-title{
       margin-bottom: 20px;
       font-size: 15px;
     }
-    .order-detail-section-item-content{
+    .products-detail-section-item-content{
       div{
         &:nth-child(1){
           text-align: center;
@@ -39,9 +39,9 @@
 /** Media querys **/
 
 @media screen and (max-width: 915px) {
-  .order-detail-horizontal-wrapper{
+  .products-detail-horizontal-wrapper{
     flex-wrap: wrap;
-    .order-detail-section-item{
+    .products-detail-section-item{
       width: 90%;
     }
   }

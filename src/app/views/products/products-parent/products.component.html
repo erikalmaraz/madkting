@@ -1,13 +1,13 @@
-<section class="orders-parent-component">
-  <div class="go-to-all">
+<section class="products-parent-component">
+  <div class="go-to-all" *ngIf="isInDetail">
     <i class="fas fa-arrow-left" [routerLink]="['/']"></i>
     <span [routerLink]="['/']">
       Ver todos
     </span>
   </div>
-  <div class="orders-tabs-list">
+  <div class="products-tabs-list">
     <!-- Fixed Tab -->
-    <div class="orders-tabs-item active">
+    <div class="products-tabs-item active">
       <span>
         <i class="fas fa-shopping-cart"></i>
       </span>
@@ -20,8 +20,8 @@
     </div>
     <!-- End Fixed Tab -->
   </div>
-  <div class="orders-child-views">
-    <order-list [hidden]="isInDetail"></order-list>
-    <order-detail [hidden]="!isInDetail"></order-detail>
+  <div class="products-child-views">
+    <products-list [hidden]="isInDetail"></products-list>
+    <products-detail [hidden]="!isInDetail"></products-detail>
   </div>
 </section>

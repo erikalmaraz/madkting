@@ -4,21 +4,28 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class OrdersService {
+export class ProductsService {
 
   api: string = "https://api.software.madkting.com";
   shopPK: number = 76;
 
   constructor(private http: HttpClient) { }
 
-  getOrders(){
+  getAllproducts(){
     const _ = this;
     let header = new HttpHeaders();
     let authorization = header.append('Authorization', 'Token 599d4be34f2cf59df13ebb27e9852570bc0684d2');
     return _.http.get(`${_.api}/shops/${_.shopPK}/products`, {headers: authorization})
   }
 
-  getOrderById(id){
+  getproducts(page, results){
+    const _ = this;
+    let header = new HttpHeaders();
+    let authorization = header.append('Authorization', 'Token 599d4be34f2cf59df13ebb27e9852570bc0684d2');
+    return _.http.get(`${_.api}/shops/${_.shopPK}/products?page_size=${results}&page=${page}`, {headers: authorization})
+  }
+
+  getproductsById(id){
     const _ = this;
     let header = new HttpHeaders();
     let authorization = header.append('Authorization', 'Token 599d4be34f2cf59df13ebb27e9852570bc0684d2');

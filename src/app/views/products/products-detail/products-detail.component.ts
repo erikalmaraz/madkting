@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { OrdersService } from '../../../core/services/orders.service';
+import { ProductsService } from '../../../core/services/products.service';
 
 @Component({
-  selector: 'order-detail',
-  templateUrl: './order-detail.component.html',
-  styleUrls: ['./order-detail.component.scss']
+  selector: 'products-detail',
+  templateUrl: './products-detail.component.html',
+  styleUrls: ['./products-detail.component.scss']
 })
-export class OrderDetailComponent implements OnInit {
+export class ProductsDetailComponent implements OnInit {
 
   productItem: any = [];
-  productId: number;
+  productId: any;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private ordersService: OrdersService
+    private productsService: ProductsService
   ) { }
 
   ngOnInit() {
@@ -26,7 +26,7 @@ export class OrderDetailComponent implements OnInit {
 
   getProducts(){
     const _ = this;
-    _.ordersService.getOrderById(_.productId).subscribe((data) => {
+    _.productsService.getproductsById(_.productId).subscribe((data) => {
         _.productItem = data;
         // _.productId
         console.log(_.productItem);

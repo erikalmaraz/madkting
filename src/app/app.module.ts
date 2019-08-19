@@ -6,28 +6,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { OrdersComponent } from './views/orders/order-parent/orders.component';
-import { OrderListComponent } from './views/orders/order-list/order-list.component';
-import { OrderDetailComponent } from './views/orders/order-detail/order-detail.component';
+import { ProductsComponent } from './views/products/products-parent/products.component';
+import { ProductsListComponent } from './views/products/products-list/products-list.component';
+import { ProductsDetailComponent } from './views/products/products-detail/products-detail.component';
 
 // Services
-import { OrdersService } from './core/services/orders.service';
+import { ProductsService } from './core/services/products.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     NavbarComponent,
-    OrdersComponent,
-    OrderListComponent,
-    OrderDetailComponent
+    ProductsComponent,
+    ProductsListComponent,
+    ProductsDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [OrdersService],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
