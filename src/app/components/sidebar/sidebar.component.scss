@@ -1,0 +1,21 @@
+.sidebar-component{
+  color: #767987;
+  max-width: 300px;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  ul{
+    list-style: none;
+    padding: 0 40px;
+    font-size: 14px;
+    margin-top: 30px;
+    li{
+      margin-bottom: 13px;
+      cursor: pointer;
+      &.active{
+        font-weight: bold;
+        color: #52a9cb;
+      }
+    }
+  }
+}

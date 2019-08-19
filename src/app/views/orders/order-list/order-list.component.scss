@@ -1,0 +1,112 @@
+@import "../../../style-variables/global-variables.scss";
+
+.orders-filter-btns{
+  margin-top: 10px;
+  button{
+    background: $white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 7px 10px;
+    margin-right: 2px;
+  }
+}
+.order-list-filter-box{
+  display: flex;
+  justify-content: space-between;
+}
+.order-list-filter-item{
+  background: $white;
+  width: 49%;
+  padding: 11px;
+  border-top: 2px solid $madktingBlue;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: lighter;
+  h5{
+    font-weight: normal;
+  }
+  .order-list-filter-item-bottom{
+    display: none;
+  }
+}
+
+.order-list-actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  button{
+    width: 90px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 7px;
+    border-radius: 4px;
+    margin-right: 3px;
+  }
+}
+
+.order-list-results{
+  margin-top: 20px;
+  border-top: 2px solid $madktingBlue;
+  .order-list-results-header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 13px;
+    background: #fff;
+    align-items: center;
+    font-weight: bold;
+    padding: 15px 0 15px 5px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    div{
+      &:nth-child(1){
+        width: 130px;
+      }
+      &:nth-child(2){
+        width: 100px;
+      }
+      &:nth-child(3){
+        width: 100px;
+      }
+      &:nth-child(4), &:nth-child(5), &:nth-child(6),
+      &:nth-child(7), &:nth-child(8), &:nth-child(9),
+      &:nth-child(10){
+        width: 85px;
+      }
+    }
+  }
+  .order-list-results-content-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 15px 6px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    &:nth-child(even){
+      background: #fff;
+    }
+    .order-list-results-content-data{
+      width: 85px;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      &:nth-child(1){
+        width: 130px;
+      }
+      &:nth-child(3){
+        width: 100px;
+        margin-left: 15px;
+      }
+      img{
+        width: 60px;
+      }
+      span{
+        margin-right: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+}

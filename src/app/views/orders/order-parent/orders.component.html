@@ -1,0 +1,27 @@
+<section class="orders-parent-component">
+  <div class="go-to-all">
+    <i class="fas fa-arrow-left" [routerLink]="['/']"></i>
+    <span [routerLink]="['/']">
+      Ver todos
+    </span>
+  </div>
+  <div class="orders-tabs-list">
+    <!-- Fixed Tab -->
+    <div class="orders-tabs-item active">
+      <span>
+        <i class="fas fa-shopping-cart"></i>
+      </span>
+      <span>
+        Productos
+      </span>
+      <span>
+        30
+      </span>
+    </div>
+    <!-- End Fixed Tab -->
+  </div>
+  <div class="orders-child-views">
+    <order-list [hidden]="isInDetail"></order-list>
+    <order-detail [hidden]="!isInDetail"></order-detail>
+  </div>
+</section>

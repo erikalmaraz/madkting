@@ -1,0 +1,163 @@
+<div class="order-list-view">
+  <div class="orders-filter-btns">
+    <button type="button" name="button">
+      <span>
+        <i class="fas fa-filter"></i>
+      </span>
+      Fecha Inicio
+    </button>
+    <button type="button" name="button">
+      <span>
+        <i class="fas fa-filter"></i>
+      </span>
+      Fecha Fin
+    </button>
+  </div>
+  <div class="order-list-filter-box">
+    <div class="order-list-filter-from order-list-filter-item">
+      <div class="order-list-filter-item-top">
+        <h5>
+          Productos Desde
+        </h5>
+      </div>
+      <div class="order-list-filter-item-bottom">
+        <div class="">
+          <input type="text">
+        </div>
+        <div class="">
+          <input type="text">
+        </div>
+        <div class="">
+          <div class="">
+            <input type="text" placeholder="Referencia...">
+          </div>
+          <div class="">
+            <input type="text" placeholder="Cliente...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="order-list-filter-to order-list-filter-item">
+      <div class="order-list-filter-item-top">
+        <h5>
+          Productos Hacia
+        </h5>
+      </div>
+      <div class="order-list-filter-item-bottom">
+        <div class="">
+          <input type="text">
+        </div>
+        <div class="">
+          <input type="text" >
+        </div>
+        <div class="">
+          <div class="">
+            <input type="text" placeholder="Referencia...">
+          </div>
+          <div class="">
+            <input type="text" placeholder="Cliente...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="order-list-actions">
+    <button type="button" name="button">
+      <span></span>
+      Exportar
+    </button>
+    <button type="button" name="button">
+      <span></span>
+      Etiquetas
+    </button>
+    <button type="button" name="button">
+      <span></span>
+      Facturas
+    </button>
+  </div>
+  <div class="order-list-results">
+    <div class="order-list-results-header">
+      <!-- Header Item  -->
+      <div class="order-list-result-header-item">
+        <input type="checkbox">
+      </div>
+      <!-- End Header Item  -->
+      <!-- Header Item  -->
+      <div class="order-list-result-header-item">
+        Nombre
+      </div>
+      <!-- End Header Item  -->
+      <!-- Header Item  -->
+      <div class="order-list-result-header-item">
+        Precio
+      </div>
+      <!-- End Header Item  -->
+      <!-- Header Item  -->
+      <div class="order-list-result-header-item">
+        Stock
+      </div>
+      <!-- End Header Item  -->
+      <!-- Header Item  -->
+      <div class="order-list-result-header-item">
+        SKU
+      </div>
+      <!-- End Header Item  -->
+      <!-- Header Item  -->
+      <div class="order-list-result-header-item">
+        Ancho(CM)
+      </div>
+      <!-- End Header Item  -->
+      <!-- Header Item  -->
+      <div class="order-list-result-header-item">
+        Alto(CM)
+      </div>
+      <!-- End Header Item  -->
+      <!-- Header Item  -->
+      <div class="order-list-result-header-item">
+        Acciones
+      </div>
+      <!-- End Header Item  -->
+    </div>
+    <div class="order-list-results-items-wrapper">
+      <!-- Result Item -->
+      <div class="order-list-results-content-item" *ngFor="let product of productList">
+        <div class="order-list-results-content-data">
+          <span>
+            <input type="checkbox">
+          </span>
+          <img [src]="product.images[0].url_source" alt="">
+        </div>
+        <div class="order-list-results-content-data">
+          {{product.name}}
+        </div>
+        <div class="order-list-results-content-data">
+          {{product.price}}
+        </div>
+        <div class="order-list-results-content-data">
+          {{product.stock}}
+        </div>
+        <div class="order-list-results-content-data">
+          {{product.sku}}
+        </div>
+        <div class="order-list-results-content-data">
+          {{product.shipping_width}}
+        </div>
+        <div class="order-list-results-content-data">
+          {{product.shipping_height}}
+        </div>
+        <div class="order-list-results-content-data">
+          <span [routerLink]="['/products/' + product.pk]">
+            <i class="far fa-eye"></i>
+          </span>
+          <span>
+            <i class="fas fa-download"></i>
+          </span>
+          <span>
+            <i class="fas fa-times"></i>
+          </span>
+        </div>
+      </div>
+      <!-- End Result Item -->
+    </div>
+  </div>
+</div>
