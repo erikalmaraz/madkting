@@ -358,7 +358,6 @@ var ProductsService = /** @class */ (function () {
             page_size: results,
             page: page
         };
-        console.log({ headers: authorization });
         return _.http.get(_.api + "/shops/" + _.shopPK + "/products/", {
             params: params,
             headers: authorization
